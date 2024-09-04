@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BailaConnect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>BailaConnect</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <h2>Bienvenue sur BailaConnect</h2>
+            <p>Ceci est la section d'accueil de votre site web. Vous pouvez personnaliser ce texte pour refléter ce que propose BailaConnect.</p>
+        </section>
+
+        <section id="about">
+            <h2>À propos</h2>
+            <p>BailaConnect est une plateforme dédiée aux passionnés de danse qui souhaitent se connecter, partager et apprendre ensemble.</p>
+        </section>
+
+        <section id="services">
+            <h2>Nos Services</h2>
+            <ul>
+                <li>Cours de danse en ligne</li>
+                <li>Événements et ateliers</li>
+                <li>Communauté de danseurs</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <p>Pour plus d'informations, n'hésitez pas à nous contacter à <a href="mailto:info@bailaconnect.com">info@bailaconnect.com</a>.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 BailaConnect. Tous droits réservés.</p>
+    </footer>
+</body>
+
+</html>
