@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+/* document.addEventListener('DOMContentLoaded', function() {
     const monthNames = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", 
                         "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
     const dayNames = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
@@ -58,6 +58,28 @@ document.addEventListener('DOMContentLoaded', function() {
             currentYear++;
         }
         renderCalendar(currentMonth, currentYear);
+*/
+
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const citySelect = document.getElementById('city');
+    const typeSelect = document.getElementById('type');
+    const resultsDiv = document.getElementById('results');
+
+    function filterResults() {
+        const city = citySelect.value;
+        const type = typeSelect.value;
+
+        // Exemple de filtrage, vous devrez remplacer cela par une logique réelle
+        resultsDiv.innerHTML = `<p>Filtrage en cours : Ville - ${city || 'Aucune'}, Type - ${type || 'Aucun'}</p>`;
+        
+        // Vous pouvez ajouter ici une logique pour afficher les résultats en fonction des filtres
+    }
+
+    citySelect.addEventListener('change', filterResults);
+    typeSelect.addEventListener('change', filterResults);
+});
+
     });
 
     renderCalendar(currentMonth, currentYear);
