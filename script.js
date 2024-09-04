@@ -1,28 +1,29 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const calendarDiv = document.getElementById('calendar');
-    const date = new Date();
-    const year = date.getFullYear();
-
     const monthNames = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", 
                         "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
-
     const dayNames = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
 
-    for (let month = 0; month < 12; month++) {
-        const monthDiv = document.createElement('div');
-        monthDiv.className = 'month';
-        monthDiv.innerHTML = `<div class="month-name">${monthNames[month]} ${year}</div>`;
-        
+    let date = new Date();
+    let currentMonth = date.getMonth();
+    let currentYear = date.getFullYear();
+
+    const calendarDiv = document.getElementById('calendar');
+    const monthYearDiv = document.getElementById('month-year');
+
+    function renderCalendar(month, year) {
+        calendarDiv.innerHTML = '';
+        monthYearDiv.textContent = `${monthNames[month]} ${year}`;
+
         const daysDiv = document.createElement('div');
         daysDiv.className = 'days';
-        
+
         dayNames.forEach(day => {
             const dayNameDiv = document.createElement('div');
             dayNameDiv.className = 'day-name';
             dayNameDiv.textContent = day;
             daysDiv.appendChild(dayNameDiv);
         });
-        
+
         const firstDay = new Date(year, month, 1).getDay();
         const daysInMonth = new Date(year, month + 1, 0).getDate();
 
@@ -38,7 +39,26 @@ document.addEventListener('DOMContentLoaded', function() {
             daysDiv.appendChild(dayNumberDiv);
         }
 
-        monthDiv.appendChild(daysDiv);
-        calendarDiv.appendChild(monthDiv);
+        calendarDiv.appendChild(daysDiv);
     }
+
+    document.getElementById('prev-month').addEventListener('click', function() {
+        currentMonth--;
+        if (currentMonth < 0) {
+            currentMonth = 11;
+            currentYear--;
+        }
+        renderCalendar(currentMonth, currentYear);
+    });
+
+    document.getElementById('next-month').addEventListener('click', function() {
+        currentMonth++;
+        if (currentMonth > 11) {
+            currentMonth = 0;
+            currentYear++;
+        }
+        renderCalendar(currentMonth, currentYear);
+    });
+
+    renderCalendar(currentMonth, currentYear);
 });
