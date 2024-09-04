@@ -1,255 +1,83 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BailaConnect</title>
+    <title>Accueil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* Utilisation de la police Roboto */
         body {
-            font-family: Calibri, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #00a896;
+            background-color: #f4f4f4;
             color: #333;
         }
 
-        header {
-            background-color: #d32f2f; /* Rouge vif */
-            color: white;
-            padding: 10px 0;
-            text-align: center;
+        /* Styles du menu */
+        nav {
+            background-color: #007BFF;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        nav {
+        ul {
             display: flex;
             justify-content: center;
-            background-color: #6a1b9a; /* Violet */
-        }
-
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-            background-color: #ff9800; /* Orange */
-            border-radius: 5px;
-            margin: 5px;
-        }
-
-        nav a:hover {
-            background-color: #fbc02d; /* Jaune */
-        }
-
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
+            list-style-type: none;
+            margin: 0;
             padding: 10px 0;
-            margin-top: 20px;
         }
 
-        form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border: 2px solid #ff9800; /* Orange pour border */
+        li {
+            margin: 0 20px;
         }
 
-        label {
-            display: block;
-            margin-bottom: 10px;
+        li a {
+            color: white;
+            text-decoration: none;
             font-weight: bold;
-            color: #d32f2f; /* Rouge vif */
-        }
-
-        input[type="submit"] {
-            background-color: #d32f2f; /* Rouge vif */
-            color: white;
             padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 4px;
         }
 
-        input[type="submit"]:hover {
-            background-color: #c2185b; /* Violet foncé */
+        li a:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
         }
 
-        .highlight {
-            color: #ff9800; /* Orange pour highlights */
-        }
-
-        .city-calendar {
-            margin-bottom: 40px;
-        }
-
-        .calendar {
-            border-collapse: collapse;
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        .calendar th, .calendar td {
-            border: 1px solid #ddd;
-            padding: 8px;
+        /* Styles du contenu */
+        h1 {
             text-align: center;
+            margin-top: 50px;
+            color: #007BFF;
+            font-size: 3em;
         }
 
-        .calendar th {
-            background-color: #ff9800; /* Orange */
-            color: white;
-        }
-
-        .calendar tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        .calendar tr:hover {
-            background-color: #fbc02d; /* Jaune */
-        }
-
-        .calendar caption {
+        p {
+            text-align: center;
             font-size: 1.2em;
-            margin: 10px 0;
+            margin: 20px auto;
+            max-width: 600px;
+            line-height: 1.6;
         }
     </style>
 </head>
-
 <body>
-    <header>
-        <h1>BailaConnect</h1>
-    </header>
 
+    <!-- Menu de navigation stylisé -->
     <nav>
-        <a href="#home">Accueil</a>
-        <a href="#about">Cours de danse</a>
-        <a href="#services">Evènements</a>
-        <a href="#stage">Stage</a>
-        <a href="#contact">Contact</a>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
 
-    <div class="container">
-        <section id="home">
-            <h2 class="highlight">Bienvenue sur BailaConnect</h2>
-            <p>Ceci est la section d'accueil de votre site web. Vous pouvez personnaliser ce texte pour refléter ce que propose BailaConnect.</p>
-        </section>
+    <h1>Bienvenue sur la page d'accueil</h1>
+    <p>Ceci est le contenu de la page d'accueil, où vous pouvez découvrir plus sur nos services et notre entreprise. Naviguez à travers les différentes sections pour en savoir plus.</p>
 
-        <section id="about">
-            <h2 class="highlight">À propos</h2>
-            <p>BailaConnect est une plateforme dédiée aux passionnés de danse qui souhaitent se connecter, partager et apprendre ensemble.</p>
-        </section>
-
-        <section id="services">
-            <h2 class="highlight">Nos Services</h2>
-            <ul>
-                <li>Cours de danse en ligne</li>
-                <li>Événements et ateliers</li>
-                <li>Communauté de danseurs</li>
-            </ul>
-        </section>
-
-        <section id="city-calendars">
-            <h2 class="highlight">Calendriers des cours de danse</h2>
-
-            <div class="city-calendar">
-                <h3>Lille</h3>
-                <table class="calendar">
-                    <caption>Calendrier de la semaine</caption>
-                    <thead>
-                        <tr>
-                            <th>Jour</th>
-                            <th>Horaires</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Lundi</td><td>18h00 - 20h00</td></tr>
-                        <tr><td>Mardi</td><td>18h00 - 20h00</td></tr>
-                        <tr><td>Mercredi</td><td>17h00 - 19h00</td></tr>
-                        <tr><td>Jeudi</td><td>18h00 - 20h00</td></tr>
-                        <tr><td>Vendredi</td><td>18h00 - 20h00</td></tr>
-                        <tr><td>Samedi</td><td>15h00 - 17h00</td></tr>
-                        <tr><td>Dimanche</td><td>Fermé</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="city-calendar">
-                <h3>Tourcoing</h3>
-                <table class="calendar">
-                    <caption>Calendrier de la semaine</caption>
-                    <thead>
-                        <tr>
-                            <th>Jour</th>
-                            <th>Horaires</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Lundi</td><td>17h00 - 19h00</td></tr>
-                        <tr><td>Mardi</td><td>19h00 - 21h00</td></tr>
-                        <tr><td>Mercredi</td><td>18h00 - 20h00</td></tr>
-                        <tr><td>Jeudi</td><td>17h00 - 19h00</td></tr>
-                        <tr><td>Vendredi</td><td>19h00 - 21h00</td></tr>
-                        <tr><td>Samedi</td><td>14h00 - 16h00</td></tr>
-                        <tr><td>Dimanche</td><td>Fermé</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="city-calendar">
-                <h3>Villeneuve d'Ascq</h3>
-                <table class="calendar">
-                    <caption>Calendrier de la semaine</caption>
-                    <thead>
-                        <tr>
-                            <th>Jour</th>
-                            <th>Horaires</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Lundi</td><td>18h00 - 20h00</td></tr>
-                        <tr><td>Mardi</td><td>17h00 - 19h00</td></tr>
-                        <tr><td>Mercredi</td><td>18h00 - 20h00</td></tr>
-                        <tr><td>Jeudi</td><td>18h00 - 20h00</td></tr>
-                        <tr><td>Vendredi</td><td>17h00 - 19h00</td></tr>
-                        <tr><td>Samedi</td><td>15h00 - 17h00</td></tr>
-                        <tr><td>Dimanche</td><td>Fermé</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-        
-        <!-- Formulaire -->
-            <form action="#" method="post">
-                <label for="dance-time">Quand voulez-vous danser ?</label>
-                <input type="radio" id="today" name="dance-time" value="today">
-                <label for="today">Aujourd'hui</label><br>
-                <input type="radio" id="tomorrow" name="dance-time" value="tomorrow">
-                <label for="tomorrow">Demain</label><br>
-                <input type="radio" id="this-week" name="dance-time" value="this-week">
-                <label for="this-week">Cette semaine</label><br>
-                <input type="radio" id="weekend" name="dance-time" value="weekend">
-                <label for="weekend">Ce weekend</label><br><br>
-                <input type="submit" value="Envoyer">
-            </form>
-        
-
-        <section id="contact">
-            <h2 class="highlight">Contactez-nous</h2>
-            <p>Pour plus d'informations, n'hésitez pas à nous contacter à <a href="mailto:info@bailaconnect.com">info@bailaconnect.com</a>.</p>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 BailaConnect. Tous droits réservés.</p>
-    </footer>
 </body>
-
 </html>
