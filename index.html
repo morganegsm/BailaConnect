@@ -86,6 +86,40 @@
         .highlight {
             color: #ff9800; /* Orange pour highlights */
         }
+
+        .city-calendar {
+            margin-bottom: 40px;
+        }
+
+        .calendar {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .calendar th, .calendar td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .calendar th {
+            background-color: #ff9800; /* Orange */
+            color: white;
+        }
+
+        .calendar tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .calendar tr:hover {
+            background-color: #fbc02d; /* Jaune */
+        }
+
+        .calendar caption {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
     </style>
 </head>
 
@@ -115,10 +149,80 @@
         <section id="services">
             <h2 class="highlight">Nos Services</h2>
             <ul>
-                <li>Cours de danse</li>
-                <li>Événements et stages</li>
+                <li>Cours de danse en ligne</li>
+                <li>Événements et ateliers</li>
                 <li>Communauté de danseurs</li>
             </ul>
+        </section>
+
+        <section id="city-calendars">
+            <h2 class="highlight">Calendriers des cours de danse</h2>
+
+            <div class="city-calendar">
+                <h3>Lille</h3>
+                <table class="calendar">
+                    <caption>Calendrier de la semaine</caption>
+                    <thead>
+                        <tr>
+                            <th>Jour</th>
+                            <th>Horaires</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Lundi</td><td>18h00 - 20h00</td></tr>
+                        <tr><td>Mardi</td><td>18h00 - 20h00</td></tr>
+                        <tr><td>Mercredi</td><td>17h00 - 19h00</td></tr>
+                        <tr><td>Jeudi</td><td>18h00 - 20h00</td></tr>
+                        <tr><td>Vendredi</td><td>18h00 - 20h00</td></tr>
+                        <tr><td>Samedi</td><td>15h00 - 17h00</td></tr>
+                        <tr><td>Dimanche</td><td>Fermé</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="city-calendar">
+                <h3>Tourcoing</h3>
+                <table class="calendar">
+                    <caption>Calendrier de la semaine</caption>
+                    <thead>
+                        <tr>
+                            <th>Jour</th>
+                            <th>Horaires</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Lundi</td><td>17h00 - 19h00</td></tr>
+                        <tr><td>Mardi</td><td>19h00 - 21h00</td></tr>
+                        <tr><td>Mercredi</td><td>18h00 - 20h00</td></tr>
+                        <tr><td>Jeudi</td><td>17h00 - 19h00</td></tr>
+                        <tr><td>Vendredi</td><td>19h00 - 21h00</td></tr>
+                        <tr><td>Samedi</td><td>14h00 - 16h00</td></tr>
+                        <tr><td>Dimanche</td><td>Fermé</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="city-calendar">
+                <h3>Villeneuve d'Ascq</h3>
+                <table class="calendar">
+                    <caption>Calendrier de la semaine</caption>
+                    <thead>
+                        <tr>
+                            <th>Jour</th>
+                            <th>Horaires</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Lundi</td><td>18h00 - 20h00</td></tr>
+                        <tr><td>Mardi</td><td>17h00 - 19h00</td></tr>
+                        <tr><td>Mercredi</td><td>18h00 - 20h00</td></tr>
+                        <tr><td>Jeudi</td><td>18h00 - 20h00</td></tr>
+                        <tr><td>Vendredi</td><td>17h00 - 19h00</td></tr>
+                        <tr><td>Samedi</td><td>15h00 - 17h00</td></tr>
+                        <tr><td>Dimanche</td><td>Fermé</td></tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <section id="contact">
@@ -129,20 +233,4 @@
                 <label for="dance-time">Quand voulez-vous danser ?</label>
                 <input type="radio" id="today" name="dance-time" value="today">
                 <label for="today">Aujourd'hui</label><br>
-                <input type="radio" id="tomorrow" name="dance-time" value="tomorrow">
-                <label for="tomorrow">Demain</label><br>
-                <input type="radio" id="this-week" name="dance-time" value="this-week">
-                <label for="this-week">Cette semaine</label><br>
-                <input type="radio" id="weekend" name="dance-time" value="weekend">
-                <label for="weekend">Ce weekend</label><br><br>
-                <input type="submit" value="Envoyer">
-            </form>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 BailaConnect. Tous droits réservés.</p>
-    </footer>
-</body>
-
-</html>
+                <input type="radio" id
