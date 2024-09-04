@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -18,4 +18,40 @@
 
     <script src="script.js"></script>
 </body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bande de Filtre</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="filter-bar">
+        <label for="city">Ville :</label>
+        <select id="city">
+            <option value="">Choisissez une ville</option>
+            <option value="Lille">Lille</option>
+            <option value="Tourcoing">Tourcoing</option>
+            <option value="Villeneuve d'Ascq">Villeneuve d'Ascq</option>
+        </select>
+        
+        <label for="type">Type :</label>
+        <select id="type">
+            <option value="">Choisissez un type</option>
+            <option value="Salsa">Salsa</option>
+            <option value="Kizomba">Kizomba</option>
+            <option value="Bachata">Bachata</option>
+        </select>
+    </div>
+
+    <div id="results">
+        <!-- Les résultats filtrés seront affichés ici -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
+
