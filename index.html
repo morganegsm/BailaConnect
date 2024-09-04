@@ -51,6 +51,32 @@
             padding: 10px 0;
             margin-top: 20px;
         }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 
@@ -89,6 +115,19 @@
         <section id="contact">
             <h2>Contactez-nous</h2>
             <p>Pour plus d'informations, n'hésitez pas à nous contacter à <a href="mailto:info@bailaconnect.com">info@bailaconnect.com</a>.</p>
+            <!-- Formulaire -->
+            <form action="#" method="post">
+                <label for="dance-time">Quand voulez-vous danser ?</label>
+                <input type="radio" id="today" name="dance-time" value="today">
+                <label for="today">Aujourd'hui</label><br>
+                <input type="radio" id="tomorrow" name="dance-time" value="tomorrow">
+                <label for="tomorrow">Demain</label><br>
+                <input type="radio" id="this-week" name="dance-time" value="this-week">
+                <label for="this-week">Cette semaine</label><br>
+                <input type="radio" id="weekend" name="dance-time" value="weekend">
+                <label for="weekend">Ce weekend</label><br><br>
+                <input type="submit" value="Envoyer">
+            </form>
         </section>
     </div>
 
